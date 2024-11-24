@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.practice.poi.excel.model.dao.ExcelMapper">
+    <resultMap id="teacher" type="com.practice.poi.excel.model.dto.ExcelDTO">
+        <id property="teacherNo" column="TEACHER_NO"/>
+        <result property="teacherName" column="TEACHER_NAME"/>
+        <result property="teacherPrice" column="TEACHER_PRICE"/>
+        <result property="className" column="CLASS_NAME"/>
+    </resultMap>
+<select id="getAllTeacherInfo" resultMap="teacher">
+    SELECT *
+    FROM TEACHER
+</select>
+
+</mapper>
